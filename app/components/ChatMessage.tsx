@@ -19,7 +19,6 @@ export default function ChatMessage({ message }: { message: UIMessage }) {
       >
           <div data-color-mode="light">
             <MarkdownPreview source={text} style={{ padding: 16 }} />
-            <JsonView value={text} />
           </div>
       </div>
     </div>
