@@ -1,4 +1,5 @@
 import type { UIMessage } from 'ai';
+import JsonView from '@uiw/react-json-view';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 export default function ChatMessage({ message }: { message: UIMessage }) {
   const isUser = message.role === 'user';
@@ -18,8 +19,8 @@ export default function ChatMessage({ message }: { message: UIMessage }) {
       >
           <div data-color-mode="light">
             <MarkdownPreview source={text} style={{ padding: 16 }} />
+            <JsonView value={text} />
           </div>
-      
       </div>
     </div>
   );
